@@ -1,12 +1,16 @@
 .trail-card {
   position: relative;
   width: 414px;
-  height: 148px;
+  min-height: 148px; /* Garante a altura mínima */
   background-color: #FDEEDC;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
   border: none;
   overflow: visible; /* Permite a imagem "vazar" */
-  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto; /* Melhor espaçamento */
 }
 
 .card-image {
@@ -14,14 +18,15 @@
   width: 200px;
   height: 200px;
   left: 50%;
-  top: -0%;
-  transform: translate(-50%, -50%);
-  pointer-events: none; /* Para garantir que a imagem não atrapalhe clique em outras áreas */
+  top: 0; /* Posiciona na parte superior do card */
+  transform: translate(-50%, -50%); /* Move metade da altura da imagem para cima */
+  pointer-events: none;
 }
+
 
 .stripe-top {
   position: absolute;
-  bottom: 62px; /* Para ficar logo acima da faixa laranja */
+  bottom: 62px;
   width: 414px;
   height: 12px;
   background-color: #FCDC94;
