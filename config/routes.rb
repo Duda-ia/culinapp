@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :paths do
     resources :journeys, only: :create
   end
+
   resources :worlds
   resources :tasks
 

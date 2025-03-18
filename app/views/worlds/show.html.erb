@@ -1,8 +1,13 @@
 <h1><%= @world.title %></h1>
 
-<% @tasks.each do |task| %>
-<ul>
-  <li><%= task.title %></li>
-</ul>
-<%= link_to "task", task_path(task) %>
-<% end %>
+<div class="tasks-container">
+  <% @tasks.each do |task| %>
+    <div class="task">
+      <h3><%= task.title %></h3>
+      <p><%= task.description %></p>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to "Back to Path", path_path(@world.path) %>
+

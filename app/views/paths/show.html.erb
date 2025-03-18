@@ -7,9 +7,9 @@
   <ul>
     <li><%= world.id %></li>
     <li><%= world.title %></li>
-    <%= link_to "jogar", world_path(world) %>
+    <%= link_to "Play", world_path(world) %>
   </ul>
 <% end %>
 
-<%= link_to "Voltar para a home", root_path %>
-<%= link_to "Deletar", path_path(@path), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+<%= link_to "Back to Paths", root_path %>
+<%= link_to "Delete", path_path(@path), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>

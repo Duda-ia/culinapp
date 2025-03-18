@@ -1,10 +1,41 @@
-<h1>Escolha a trilha que deseja seguir</h1>
-<ul>
-  <% @paths.each do |path| %>
-  <li><%= path.title %></li>
-    <%= simple_form_for [path, @journey] do |f| %>
-      <%= f.submit "entrar na trilha" %>
-    <% end %>
-  <% end %>
-</ul>
 
+<div class="path-container">
+  <!-- Salty Recipes Card -->
+  <div class="path-card">
+    <div class="path-card-image"></div>
+    <%= image_tag "salty_path_icon.png", alt: "Salty Recipes Icon", class: "path-image" %>
+     <%= link_to "Salty Recipes", paths_path(1), class: "clickable-title" %>
+  </div>
+
+  <!-- Sweet Recipes Card -->
+  <div class="path-card">
+    <div class="path-card-image">
+    <%= image_tag "sweet_path_icon.png", alt: "Sweet Recipes Icon", class: "path-image" %>
+    </div>
+    <div class="path-action">
+     <%= link_to "Sweet Recipes", paths_path(2), class: "clickable-title" %>
+  </div>
+=======
+<div class="cards-container">
+  <% @paths.first(2).each_with_index do |path, index| %>
+    <div class="trail-card">
+      <% if index == 0 %>
+        <%= image_tag "salty.svg", class: "card-image", alt: path.title %>
+      <% else %>
+        <%= image_tag "sweet.svg", class: "card-image", alt: path.title %>
+      <% end %>
+
+      <div class="stripe-top"></div>
+
+      <%= simple_form_for [path, @journey] do |f| %>
+        <div class="stripe-bottom">
+          <% if index == 0 %>
+            <%= f.submit "Salty Recipes", class: "stripe-button" %>
+          <% else %>
+            <%= f.submit "Sweet Recipes", class: "stripe-button" %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

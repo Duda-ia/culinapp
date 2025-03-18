@@ -10,11 +10,11 @@
 # db/seeds.rb
 
 # Remover todos os dados existentes para evitar duplicações
-User.destroy_all
-Path.destroy_all
-World.destroy_all
-Task.destroy_all
 Journey.destroy_all
+Task.destroy_all
+World.destroy_all
+Path.destroy_all
+User.destroy_all
 
 # Criando usuários
 user1 = User.create!(

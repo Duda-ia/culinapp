@@ -1,8 +1,8 @@
 class WorldsController < ApplicationController
+  before_action :set_world, only: [:show]
 
   def show
-    @world = World.find(params[:id])
-    @tasks = Task.where(world: params[:id])
+    @tasks = Task.where(world: @world.id)
   end
 
   def destroy
@@ -11,6 +11,10 @@ class WorldsController < ApplicationController
   end
 
   private
+
+  def set_world
+    @world = World.find(params[:id])
+  end
 
   def world_params
     params.require(:world).permit(:title, :done)
