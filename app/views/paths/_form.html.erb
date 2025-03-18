@@ -5,8 +5,11 @@
   <div class="form-inputs">
      <%= f.input :title %>
       <%= f.input :description %>
-    </div>
-    <div class="d-grid">
+  </div>
+  <div>
+    <%= cl_image_upload_tag(:cloudinary_image_id) %>
+  </div>
+  <div class="d-grid">
     <%= f.button :submit, class: 'btn btn-primary' %>
   </div>
   <% end %>

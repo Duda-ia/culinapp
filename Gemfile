@@ -5,6 +5,9 @@ ruby "3.3.5"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.5", ">= 7.1.5.1"
 
+gem "dotenv-rails"
+
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
@@ -42,6 +45,9 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "bootsnap", require: false
 
 gem "devise"
+
+gem "cloudinary"
+
 
 gem "bootstrap", "~> 5.2"
 gem "autoprefixer-rails"
