@@ -14,7 +14,7 @@ export default class extends Controller {
 
     event.preventDefault();
     this.audioTarget.addEventListener("ended", () => {
-      this.element.querySelector("form").submit(); 
+      this.element.querySelector("form").submit();
     });
   }
 
