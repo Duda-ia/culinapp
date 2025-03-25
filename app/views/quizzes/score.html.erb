@@ -1,14 +1,35 @@
-<h1>Your Answer was:</h1>
+<div class="result-container <%= @result == 'correct' ? 'correct' : 'incorrect' %>">
 
-<% if @result == "correct" %>
-  <h2 style="color: green;">✅ Correct!</h2>
-<% else %>
-  <h2 style="color: red;">❌ Incorrect.</h2>
-  <p>Your answer: <strong><%= @selected_answer || "No answer selected" %></strong></p>
-  <p>Correct answer: <strong><%= @correct_answer %></strong></p>
-<% end %>
+  <% if @result == "correct" %>
+    <!-- Question Text on Top -->
+    <p class="result-text">congrats, you choose the right answer!</p>
 
-<br>
+    <h2 class="question-title"><%= @question.content %></h2>
 
-<%= link_to "Play Again 🎮", quiz_path(return_to: @return_to), class: "button" %> |
-<%= link_to "Back", @return_to || root_path, class: "button" %>
+    <!-- Correct Answer Styled Block with white background -->
+    <div class="answer-badge">
+      <div class="answer-content">
+        <span class="answer-text"><%= @selected_answer&.upcase || "YOUR ANSWER" %></span>
+      </div>
+    </div>
+
+    <img src="/assets/chef_icecream.svg" alt="Chef with ice cream" class="character-img">
+
+  <% else %>
+    <!-- Incorrect Answer Block -->
+    <div class="incorrect-card">
+      <h2>Oops...</h2>
+      <h2> sorry, you didn't get it right this time! </h2>
+      <div class="try-again-tag">
+        Let's play again? <span class="try-again-icon">✖</span>
+      </div>
+    </div>
+  <% end %>
+
+</div>
+
+<!-- ✅ These Buttons show no matter what -->
+<div class="buttons-container">
+  <%= link_to "PLAY AGAIN", quiz_path(return_to: @return_to), class: "custom-button-quizz" %>
+  <%= link_to "BACK TO RECIPE", @return_to || root_path, class: "custom-button-quizz" %>
+</div>

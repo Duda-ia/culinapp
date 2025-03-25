@@ -1,0 +1,95 @@
+.result-container {
+  background-color: #f79b28;
+  color: #fff;
+  padding: 30px 20px;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 400px;
+  margin: 40px auto;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Incorrect Card */
+.incorrect-card {
+  background-color: #fff;
+  color: #000;
+  border-radius: 30px;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.incorrect-card h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+/* Tag "Try again next time" */
+.try-again-tag {
+  background-color: #fef1e5;
+  color: #000;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.try-again-icon {
+  background-color: #f79b28;
+  color: #fff;
+  border-radius: 50%;
+  padding: 5px 8px;
+  margin-left: 12px;
+  font-size: 14px;
+}
+
+/* Big Play Again Button */
+.retry-button {
+  background-color: #fff;
+  color: #f79b28;
+  font-weight: 700;
+  padding: 15px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 30px;
+  font-size: 18px;
+  text-align: center;
+  width: 80%;
+  transition: background-color 0.3s ease;
+}
+
+.retry-button:hover {
+  background-color: #dbb485;
+  color: #fff;
+}
+
+.answer-badge {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.answer-content {
+  background-color: #fff;
+  color: #f79b28;
+  padding: 15px 30px;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: 700;
+  font-size: 10px;
+}
+
+.answer-text {
+  font-weight: 700;
+}
+
+.badge-icon {
+  color: #f79b28;
+  font-size: 18px;
+}

@@ -1,26 +1,34 @@
 .quiz-container {
   max-width: 500px;
-  height: 100%;
-  margin: 20px auto;
-  padding: 20px;
+  min-height: 100vh;        /* Full viewport height */
+  margin: 0 auto;
+  padding: 25px 25px 40px;  /* Top padding keeps content near the top */
   background-color: #f79b28;
   border-radius: 12px;
   text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  font: montserrat;
+  /* Removed justify-content: center */
 }
 
+
 .question-image {
-  max-width: 100%;      /* Fully responsive */
-  height: auto;         /* Maintains original aspect ratio */
+  max-width: 100%;
+  height: auto;
   display: block;
-  margin-bottom: 16px;  /* Space between image and question */
+  margin-bottom: 16px;
   border-radius: 8px;
 }
 
-.question-text {
-  font-size: 18px;
+.question-title {
+  font-size: 20px;
   font-weight: bold;
-  margin: 20px 0;
+  margin: 16px 0;
+  color: black;
 }
+
 
 .answers-container {
   display: flex;
@@ -61,18 +69,49 @@
   color: #f79b28;
   font-weight: 400;
   border: none;
-  padding: 5px 20px;       /* More balanced padding */
+  padding: 5px 15px;        /* Smaller padding = less height */
   border-radius: 30px;
   cursor: pointer;
   margin-top: 20px;
-  text-transform: downcase;
-  font-size: 10px;          /* Increased from 8px */
-  width: 60%;               /* Looks better and scales */
+  font-size: 15x;
+  width: 50%;               /* Optional: make it narrower */
+  line-height: 1.2;         /* Adjust vertical text spacing */
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 
 .submit-button:hover {
   background-color: #dbb485;
   color: #fff;
   border: 1px solid #fff;
 }
+
+
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.custom-button-quizz {
+  display: inline-block;
+  background: #FF9B05;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  min-width: 160px;
+  text-align: center;
+}
+
+.custom-button-quizz:hover {
+  background-color: #fdae39;
+}
+
+  .custom-button-quizz:hover {
+    background-color: #fdae39;
+  }
